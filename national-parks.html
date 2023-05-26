@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>National Parks</title>
+  </head>
+  <body>
+    <section onchange="checkButton()">
+    <input type="radio" id="stateLocationButton" name="buttonChoices" value="1" />
+    <label for="stateLocationButton">By Location</label>
+    <input type="radio" id="parkTypeButton" name="buttonChoices" value="2" />
+
+    <label for="parkTypeButton">By Type</label>
+  </section>
+    <select id="stateDropDown" onchange="loadParksByStateTable()"></select>
+    <select id="typeDropDown" onchange="loadParksByParkTypeTable()"></select>
+    <table id="national-park-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Zip</th>
+          <th>Phone</th>
+          <th>Website</th>
+        </tr>
+      </thead>
+
+      <tbody id="national-park-table-body"></tbody>
+    </table>
+
+    <script src="scripts/locationData.js"></script>
+    <script src="scripts/nationalParkData.js"></script>
+    <script src="scripts/parkTypeData.js"></script>
+    <script src="scripts/nationalParkPage.js"></script>
+  </body>
+</html>
